@@ -1,0 +1,359 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	 /* Delegamos para o navegador fazer a conta de calcular a largura que resta, dividir por dois, e adicionar metade em cada um dos lados */
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase; /* deixando o texto em maiúsculo */
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+	/* o text-decoretion: underline deixa sublinhado quando clica o mouse em cima */
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	/* mexxendo com px e % */
+	box-sizing: border-box;
+	/* isso faz com que os 30% adicionados no width sejam reamente 30% e que os 30px e 20px do padding estajam dentro desses 30%*/
+
+	border: 2px solid #000000;
+	border-radius: 10px;
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19;
+	/* o active que dizer que quando o elemento for clicado, vai executar essas ações */
+}
+
+/* essa descrição abaixo diz que quando o mouse estiver por cima de produtos li, ele vai alterar o h2 */
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg"); /* colocando uma imagem como fundo */
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+
+
+form {
+	margin: 40px 0;
+}
+
+/* quando usa a vírgula, eu posso selecionar duas propriedades e aplicar a mesma regra para os dois elementos buscados */
+form label, form legend {
+	display:block; /* coloca cada conteúdo em um linha */
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+.enviar {
+	width:40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	/* a transição faz om que a mudança não seja instantânea e fique mais suave a transição de uma cor para a outra */
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.enviar:hover {
+	background: darkorange;
+	/* aumenta o botão em 20% do seu tamanho */
+	transform: scale(1.2);
+	/* rotaciona o elemento em 70 graus */
+	/*transform: rotate(70deg);*/
+}
+
+
+table {
+	margin: 20px 0 40px;
+}
+
+thead {
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px;
+}
+
+
+/* css da página inicial */
+.banner {
+	width:100%;
+}
+
+.titulo-principal {
+	text-align: center;
+	/* 2em significa que a fonte vai ter o dobro do tamanho padrão, se a fonte é 15px, 2em faz com que tenha 30px  */
+	font-size: 2em;
+	margin: 0 0 1em;
+	/* o clear limpa a formatação de elementos que eu não quero que seja influenciado pelo float  */
+	clear: left;
+}
+
+/* mais opções de css 
+/* pegando a primeira letra de uma palavra 
+.titulo-principal:first-letter {
+	font-weight: bold;
+}
+
+/* pegando a primeira linha de uma parágrafo 
+p:first-line {
+	font-style: italic;
+}
+
+/* colocando algo antes e depois do elemento 
+.titulo-principal:before {
+	content: "["
+}
+
+.titulo-principal:after {
+	content: "]"
+}
+
+
+pegando o filho direto da tag main (>). ou seja, seleciona o elemento filho a partir do elemento pai
+main > p {
+	color: red;
+}
+
+pegando o elemento irmão de uma tag (+)
+img + p {
+	
+}
+
+pegando todos os elementos que são irmão da tag (~), ou seja todos os elementos que vem depois da tag indicada:
+
+img ~ p {
+	aqui pega todos os p que vem após a imagem
+}
+
+dá pra juntar:
+img > p + h2{
+	
+}
+
+selecionando todos os elementos que não pertencem ao id indicado
+
+.principal p:not(#missao)
+
+usando o método calc()
+
+width: calc( (100% / 3) - 10px )
+
+*/
+
+
+.principal {
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px;
+	/* o float faz com que o elemento flutue e o conteúdo a sua volta fique ao redor dele. servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele */
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 3em 0;
+	/* usando gradiente de cor. antes da primeira cor pode colocar o grau (45deg) que vocÊ quer que a inclinação comece. pode também escolher uma cor e dizer que ela ocupa 50% do degradê e as outras ocupam o restante */
+	background: linear-gradient(#FEFEFE, #888888);
+	/* degradê circular:
+	 */
+	/*background: radial-gradient(#FEFEFE, #888888);*/
+
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5;
+}
+
+/* pseudoelementos */
+.itens:first-child {
+	font-weight: bold;
+	/* também poderia usar o :nth-child(2) e colocar o valor (2n) isso faz com que eu pegue só os valores pares. pq ele pega o item 2 e soma mais 2 e aplica as modificações em todos que encontrar */
+}
+
+.itens:before {
+	content: "\2605  ";
+}
+
+.imagem-beneficios {
+	width: 60%;
+	/* mudando a opacidate e colocando ma transição de 400ms para poder dar um efeito na foto. a opacidade pode ser usada também em cores com o rgba(0,0,0, 0.3) 0.3 de opacidade no preto */
+	opacity: 1;
+	transition: 400ms;
+	/* sombra:
+	
+	box-shadow(eixo X, eixo y, blur, intensidade da borda (o quanto ela se espalha), cor). 
+	posso usar várias sombras é só colocar uma vírgula: box-shadow: 10px 10px 10px 0 #000000, -10px -10px yellow, .....; 
+	
+	o box-shadow: inset faz uma borda interna. 
+	box-shadow: inset 0 0 5px black;
+	
+	pode usar no texto também:
+	text-shadow: 2px 2px red
+	*/
+	box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagem-beneficios:hover {
+	opacity: 0.3;
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+}
+
+/* deixando o site responsivo. aqui está deixando em automático os elementos que estão com largura específica pra que les se adaptem melhor a telas menores.  */
+@media screen and (max-width: 480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+
+	
+}
+
+/* desafio adaptar a página dos produtos e do contato */

@@ -1,0 +1,3 @@
+[submodule "Curso-em-Video"]
+	path = Curso-em-Video
+	url = git@github.com:CharlieBellow/html-e-css.git
